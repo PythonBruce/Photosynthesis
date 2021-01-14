@@ -412,8 +412,24 @@ var procedures = (function() {
     plotManager.setCurrentPlot("Production Rate");
     plotManager.setCurrentPen("Sugar");
     plotManager.plotValue(world.turtleManager.turtlesOfBreed("SUGAR").size());
+    plotManager.setCurrentPen("Oxygen");
+    plotManager.plotValue(world.turtleManager.turtlesOfBreed("OXYGEN").size());
+    plotManager.setCurrentPen("CO2");
+    plotManager.plotValue(world.turtleManager.turtlesOfBreed("CO2").size());
+    
+    
+    
   };
-  
+  /*
+  var doPlot = function() {
+    plotManager.setCurrentPlot("Populations");
+   
+    plotManager.setCurrentPen("rabbits");
+    plotManager.plotValue(world.turtleManager.turtlesOfBreed("RABBITS").size());
+    
+   
+  };
+  */
   
   
   
