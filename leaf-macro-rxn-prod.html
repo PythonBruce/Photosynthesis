@@ -62,24 +62,34 @@ modelConfig.plots = [(function() {
   var name    = 'Populations';
   var plotOps = (typeof modelPlotOps[name] !== "undefined" && modelPlotOps[name] !== null) ? modelPlotOps[name] : new PlotOps(function() {}, function() {}, function() {}, function() { return function() {}; }, function() { return function() {}; }, function() { return function() {}; }, function() { return function() {}; });
 
-  
-  
+  */
+modelConfig.plots = [(function() {
+  var name    = 'Production Rate';
+  var plotOps = (typeof modelPlotOps[name] !== "undefined" && modelPlotOps[name] !== null) ? modelPlotOps[name] : new PlotOps(function() {}, function() {}, function() {}, function() { return function() {}; }, function() { return function() {}; }, function() { return function() {}; }, function() { return function() {}; });
+
+  /* --------------------------------------      
   var pens    = [new PenBundle.Pen('grass', plotOps.makePenOps, false, new PenBundle.State(55.0, 1.0, PenBundle.DisplayMode.Line), function() {
     workspace.rng.withAux(function() { plotManager.withTemporaryContext('Populations', 'grass')(function() {}); });
   }, function() {
     workspace.rng.withAux(function() { plotManager.withTemporaryContext('Populations', 'grass')(function() {}); });
   }),
-                 
-                 
-                 
-  new PenBundle.Pen('rabbits', plotOps.makePenOps, false, new PenBundle.State(15.0, 1.0, PenBundle.DisplayMode.Line), function() {
-    workspace.rng.withAux(function() { plotManager.withTemporaryContext('Populations', 'rabbits')(function() {}); });
+  
+ */
+ var pens    = [new PenBundle.Pen('Sugar', plotOps.makePenOps, false, new PenBundle.State(15.0, 4.0, PenBundle.DisplayMode.Line), function() {
+    workspace.rng.withAux(function() { plotManager.withTemporaryContext('Production Rate', 'Sugar')(function() {}); });
   }, function() {
-    workspace.rng.withAux(function() { plotManager.withTemporaryContext('Populations', 'rabbits')(function() {}); });
+    workspace.rng.withAux(function() { plotManager.withTemporaryContext('Production Rate', 'Sugar')(function() {}); });
+  })];
+                   
+                 
+  new PenBundle.Pen('Oxygen', plotOps.makePenOps, false, new PenBundle.State(15.0, 1.0, PenBundle.DisplayMode.Line), function() {
+    workspace.rng.withAux(function() { plotManager.withTemporaryContext('Production Rate', 'Oxygen')(function() {}); });
+  }, function() {
+    workspace.rng.withAux(function() { plotManager.withTemporaryContext('Production Rate', 'Oxygen')(function() {}); });
   }),
                  
                  
-                 
+  /* --------------------------------------                                    
   new PenBundle.Pen('weeds', plotOps.makePenOps, false, new PenBundle.State(115.0, 1.0, PenBundle.DisplayMode.Line), function() {
     workspace.rng.withAux(function() { plotManager.withTemporaryContext('Populations', 'weeds')(function() {}); });
   }, function() {
@@ -87,6 +97,7 @@ modelConfig.plots = [(function() {
   })];
   
   
+  /* --------------------------------------                       
   var setup   = function() {
     workspace.rng.withAux(function() { plotManager.withTemporaryContext('Populations', undefined)(function() {}); });
   };
@@ -95,38 +106,15 @@ modelConfig.plots = [(function() {
   };
   return new Plot(name, pens, plotOps, "Time", "Pop", true, 0.0, 100.0, 0.0, 111.0, setup, update);
 })()];
-
       ----------------------------
       ------------------------- */
-      
-      
-      
-      
-modelConfig.plots = [(function() {
-  var name    = 'Production Rate';
-  var plotOps = (typeof modelPlotOps[name] !== "undefined" && modelPlotOps[name] !== null) ? modelPlotOps[name] : new PlotOps(function() {}, function() {}, function() {}, function() { return function() {}; }, function() { return function() {}; }, function() { return function() {}; }, function() { return function() {}; });
-  
-  
-  
-  
-  
-  var pens    = [new PenBundle.Pen('Sugar', plotOps.makePenOps, false, new PenBundle.State(15.0, 4.0, PenBundle.DisplayMode.Line), function() {
-    workspace.rng.withAux(function() { plotManager.withTemporaryContext('Production Rate', 'Sugar')(function() {}); });
-  }, function() {
-    workspace.rng.withAux(function() { plotManager.withTemporaryContext('Production Rate', 'Sugar')(function() {}); });
-  })];
-  
-  
-  
-  
-  
   var setup   = function() {
     workspace.rng.withAux(function() { plotManager.withTemporaryContext('Production Rate', undefined)(function() {}); });
   };
   var update  = function() {
     workspace.rng.withAux(function() { plotManager.withTemporaryContext('Production Rate', undefined)(function() {}); });
   };
-  return new Plot(name, pens, plotOps, "", "", true, 0.0, 100.0, 0.0, 4.0, setup, update);
+  return new Plot(name, pens, plotOps, "Time", "", true, 0.0, 100.0, 0.0, 49.0, setup, update);
 })()];
       
       
