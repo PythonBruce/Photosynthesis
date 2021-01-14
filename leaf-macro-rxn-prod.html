@@ -82,7 +82,7 @@ modelConfig.plots = [(function() {
   }),
                    
 
-  new PenBundle.Pen('Oxygen', plotOps.makePenOps, false, new PenBundle.State(15.0, 4.0, PenBundle.DisplayMode.Line), function() {
+  new PenBundle.Pen('Oxygen', plotOps.makePenOps, false, new PenBundle.State(55.0, 1.0, PenBundle.DisplayMode.Line), function() {
     workspace.rng.withAux(function() { plotManager.withTemporaryContext('Production Rate', 'Oxygen')(function() {}); });
   }, function() {
     workspace.rng.withAux(function() { plotManager.withTemporaryContext('Production Rate', 'Oxygen')(function() {}); });
@@ -115,7 +115,7 @@ modelConfig.plots = [(function() {
   var update  = function() {
     workspace.rng.withAux(function() { plotManager.withTemporaryContext('Production Rate', undefined)(function() {}); });
   };
-  return new Plot(name, pens, plotOps, "OXY TEST", "", true, 0.0, 100.0, 0.0, 4.0, setup, update);
+  return new Plot(name, pens, plotOps, "cOLOR TEST", "", true, 0.0, 100.0, 0.0, 4.0, setup, update);
 })()];
       
       
