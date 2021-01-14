@@ -88,7 +88,7 @@ modelConfig.plots = [(function() {
     workspace.rng.withAux(function() { plotManager.withTemporaryContext('Production Rate', 'Oxygen')(function() {}); });
   }),
                  
-                 
+/*
   new PenBundle.Pen('CO2', plotOps.makePenOps, false, new PenBundle.State(115.0, 1.0, PenBundle.DisplayMode.Line), function() {
     workspace.rng.withAux(function() { plotManager.withTemporaryContext('Populations', 'CO2')(function() {}); });
   }, function() {
@@ -113,7 +113,7 @@ modelConfig.plots = [(function() {
   var update  = function() {
     workspace.rng.withAux(function() { plotManager.withTemporaryContext('Production Rate', undefined)(function() {}); });
   };
-  return new Plot(name, pens, plotOps, "", "", true, 0.0, 100.0, 0.0, 4.0, setup, update);
+  return new Plot(name, pens, plotOps, "OXY TEST", "", true, 0.0, 100.0, 0.0, 4.0, setup, update);
 })()];
       
       
@@ -412,9 +412,10 @@ var procedures = (function() {
     plotManager.plotValue(world.turtleManager.turtlesOfBreed("SUGAR").size());
     plotManager.setCurrentPen("Oxygen");
     plotManager.plotValue(world.turtleManager.turtlesOfBreed("OXYGEN").size());
+  /*
     plotManager.setCurrentPen("CO2");
     plotManager.plotValue(world.turtleManager.turtlesOfBreed("CO2").size());
-    
+  */  
     
     
   };
