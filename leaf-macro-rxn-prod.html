@@ -81,7 +81,8 @@ modelConfig.plots = [(function() {
     workspace.rng.withAux(function() { plotManager.withTemporaryContext('Production Rate', 'Sugar')(function() {}); });
   })];
                    
-                 
+  /* --------------------------------------                                    
+
   new PenBundle.Pen('Oxygen', plotOps.makePenOps, false, new PenBundle.State(15.0, 1.0, PenBundle.DisplayMode.Line), function() {
     workspace.rng.withAux(function() { plotManager.withTemporaryContext('Production Rate', 'Oxygen')(function() {}); });
   }, function() {
